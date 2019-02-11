@@ -15,4 +15,4 @@ const studentSchema = new Schema ({
 
 })
 
-module.exports = mongoose.model('collectionName',studentSchema)
+module.exports = mongoose.model('students',studentSchema)
