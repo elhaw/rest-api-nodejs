@@ -7,12 +7,23 @@ const studentSchema = new Schema ({
             type:String,
             required:true,
         },
-        secondName :{
+        lastdName :{
             type:String,
             required:true,
+        },
+        email:{
+            type:String
+        },
+        school:{
+            type:String
+        },
+        phone:{
+            type:Number
+        },
+        createdAt:{
+            type:Date,
+            default:Date.now
         }
-
-
 })
 
 module.exports = mongoose.model('students',studentSchema)
