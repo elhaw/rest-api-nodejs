@@ -43,14 +43,17 @@ const updateById = (req,res)=>{
        return res.json(student)
     })
 }
-const deleteContact = (req,res)=>{
-    let studentId = req.params.studentId
-    StudentModel.findByIdAndRemove({_id:studentId},(err,student)=>{
-        if(err){
-            console.error(err)
-        }
+const  deleteContact = async (req,res)=>{
+
+    try {
+       let studentId = req.params.studentId
+       await StudentModel.findByIdAndRemove({_id:studentId})
        return res.json('Student is deleted')
-    })
+
+    }
+    catch(err) {
+        console.error(err)
+    }
 }
 
 module.exports = {
