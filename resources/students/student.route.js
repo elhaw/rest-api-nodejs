@@ -1,4 +1,5 @@
 const {Router} = require('express')
+const studentContrller = require('./student.controller')
 const router = Router()
 const port = 3000
 
@@ -7,9 +8,7 @@ router.route('/')
     .get((req,res)=>{
         res.send(`running server get student ${port}`)
     })
-    .post((req,res)=>{
-    res.send(`running server post student ${port}`)
-    })
+    .post(studentContrller)
 
 router.route('/studentId')
     .put((req,res)=>{

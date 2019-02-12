@@ -7,7 +7,7 @@ const studentSchema = new Schema ({
             type:String,
             required:true,
         },
-        lastdName :{
+        lastName :{
             type:String,
             required:true,
         },
