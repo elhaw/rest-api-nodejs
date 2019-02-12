@@ -20,6 +20,9 @@ const studentSchema = new Schema ({
         phone:{
             type:Number
         },
+        gender:{
+            type:String
+        },
         createdAt:{
             type:Date,
             default:Date.now

@@ -1,7 +1,7 @@
 const StudentModel = require('./student.model')
 
 
-module.exports = (req,res)=>{
+const addStudent = (req,res)=>{
 
     let newStudent = new StudentModel(req.body)
     newStudent.save((err,student)=>{
@@ -10,4 +10,19 @@ module.exports = (req,res)=>{
         }
         res.json(student)
     })
-}  
+}
+const getStudents = (req,res)=>{
+
+    StudentModel.find({},(err,students)=>{
+        if(err){
+            console.error(err)
+        }
+
+        return res.json(students)
+    })
+}
+
+module.exports = {
+    addStudent,
+    getStudents
+}
