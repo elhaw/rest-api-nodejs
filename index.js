@@ -1,6 +1,8 @@
 const express = require('express')
 const logger = require('morgan')
 const errorhandler = require('errorhandler')
+const jwt = require('jsonwebtoken')
+
 
 const studentRoutes = require('./resources/students/student.route')
 const app = express()
