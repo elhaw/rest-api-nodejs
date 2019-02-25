@@ -40,7 +40,7 @@ find student by id.
 
 Add new stdent record 
 
-**Request body**
+** Body request **
 
 ```
     {
