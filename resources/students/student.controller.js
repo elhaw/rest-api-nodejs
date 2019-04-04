@@ -3,22 +3,22 @@ const StudentModel = require('./student.model')
 
 const addStudent = (req,res)=>{
 
-    let newStudent = new StudentModel(req.body)
+    const newStudent = new StudentModel(req.body);
     newStudent.save((err,student)=>{
         if(err) {
-            console.log(err)
+            console.log(err);
         }
-        res.json(student)
+        res.json(student);
     })
 }
 const getStudents = (req,res)=>{
 
     StudentModel.find({},(err,students)=>{
         if(err){
-            console.error(err)
+            console.error(err);
         }
 
-        return res.json(students)
+        return res.json(students);
     })
 }
 
@@ -26,10 +26,10 @@ const getStudentsById = (req,res)=>{
     let studentId = req.params.studentId
     StudentModel.findById(studentId,(err,students)=>{
         if(err){
-            console.error(err)
+            console.error(err);
         }
 
-        return res.json(students)
+        return res.json(students);
     })
 }
 
